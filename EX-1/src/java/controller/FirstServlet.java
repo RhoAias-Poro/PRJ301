@@ -2,10 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -14,7 +16,8 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author Admin
  */
-public class NewServlet1 extends HttpServlet {
+@WebServlet(name = "FirstServlet", urlPatterns = {"/first"})
+public class FirstServlet extends HttpServlet {
 
 	/**
 	 * Processes requests for both HTTP <code>GET</code> and
@@ -33,10 +36,10 @@ public class NewServlet1 extends HttpServlet {
 			out.println("<!DOCTYPE html>");
 			out.println("<html>");
 			out.println("<head>");
-			out.println("<title>Servlet NewServlet1</title>");			
+			out.println("<title>Servlet FirstServlet</title>");			
 			out.println("</head>");
 			out.println("<body>");
-			out.println("<h1>Servlet NewServlet1 at " + request.getContextPath() + "</h1>");
+			out.println("<h1>Servlet FirstServlet at " + request.getContextPath() + "</h1>");
 			out.println("</body>");
 			out.println("</html>");
 		}
