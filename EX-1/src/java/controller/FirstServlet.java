@@ -40,6 +40,8 @@ public class FirstServlet extends HttpServlet {
 			out.println("</head>");
 			out.println("<body>");
 			out.println("<h1>Servlet FirstServlet at " + request.getContextPath() + "</h1>");
+			String name = "Thinh Poro";
+			out.println("<h2 style='color:chocolate'>" + name + "</h2>");
 			out.println("</body>");
 			out.println("</html>");
 		}
